@@ -1,0 +1,39 @@
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{asset('asset/css/animate.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/owl.carousel.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/owl.theme.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/prettyPhoto.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/smoothness/jquery-ui-1.10.4.custom.min.css')}}">
+<link rel="stylesheet" href="{{asset('asset/rs-plugin/css/settings.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/theme.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/colors/brown.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/responsive.css')}}">
+<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+
+<!-- Javascripts --> 
+<script type="text/javascript" src="{{asset('asset/js/jquery-1.11.0.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/bootstrap.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/bootstrap-hover-dropdown.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/owl.carousel.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery.parallax-1.1.3.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/jquery.nicescroll.js')}}"></script>  
+<script type="text/javascript" src="{{asset('asset/js/jquery.prettyPhoto.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery-ui-1.10.4.custom.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery.forms.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery.sticky.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/waypoints.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery.isotope.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/jquery.gmap.min.js')}}"></script> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{{asset('asset/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script> 
+<script type="text/javascript" src="{{asset('asset/js/app/base.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/custom.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/app/payment.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/jquery.plugin.js')}}"></script>
+<script type="text/javascript" src="{{asset('asset/js/jquery.countdown.js')}}"></script>
+<!-- Jquery Validate -->
+<script src="{{asset('asset/js/plugins/validate/jquery.validate.min.js')}}"></script>

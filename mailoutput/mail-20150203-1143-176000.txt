@@ -1,0 +1,13 @@
+To: your@email.com
+Subject: Good news! A reservation has been requested by
+From:  <>
+
+Good news! A reservation has been requested by  
+
+The customer wants to check-in at: 03/02/2015 
+and check-out at: 04/02/2015
+
+The customer requested a 0 room for 1 adult(s) and 0 child(ren).
+
+You can contact the customer via email,  or hit 'reply' in your email browser to make the reservation complete.
+

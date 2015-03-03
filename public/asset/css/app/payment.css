@@ -1,0 +1,270 @@
+/*----- Accordion -----*/
+.accordion-toggle {
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+    height: 20px;
+    background: #f2f2f2;
+    border-bottom:1px solid #ccc;
+    color: green;
+}
+
+.accordion-content {
+    background: #fff;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+    border:1px solid #ccc;
+    font-size: .8em;
+    line-height: 140%;
+    display:none;
+}
+
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
+}
+ 
+.accordion {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#f7f7f7;
+}
+ 
+/*----- Section Titles -----*/
+.accordion-section-title {
+    cursor: pointer;
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #1a1a1a;
+    background:#333;
+    transition:all linear 0.15s;
+    /* Type */
+    font-size:1.200em;
+    text-shadow:0px 1px 0px #1a1a1a;
+    color:#fff;
+}
+ 
+.accordion-section-title.active, .accordion-section-title:hover {
+    background:#4c4c4c;
+    /* Type */
+    text-decoration:none;
+}
+ 
+.accordion-section:last-child .accordion-section-title {
+    border-bottom:none;
+}
+ 
+/*----- Section Content -----*/
+.accordion-section-content {
+    padding:15px;
+    display:none;
+}
+
+
+.choose-payment{}
+
+.choose-payment .box-check{
+    border: 1px solid #dfdfdf;
+    float: left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.choose-payment .box-check span{
+    float: none;
+    margin: 0;
+}
+
+.choose-payment .box-check .checklist-green{
+    width: 12px;
+    height: 10px;
+    float: left;
+    margin: 3px 5px 0 0;
+    background: url('../../images/checklist-green.png') left center no-repeat;
+}
+
+.choose-payment span{
+    float: left;
+    margin: 5px 5px 0 5px;
+}
+
+.choose-payment ul{
+    
+}
+
+.choose-payment ul li{
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.choose-payment ul li a{
+    /*display: block;*/
+    width: 50px;
+    height: 31px;
+    opacity: .3;
+    transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+}
+
+.choose-payment ul li.active a,
+.choose-payment ul li.active a:hover{
+   opacity: 1;
+}
+
+.choose-payment ul li {
+    list-style-type: none;
+}
+
+.choose-payment ul li a:hover{
+    opacity: .5;
+}
+
+.choose-payment ul li a.method-visa{
+    background: url('../../images/payment-method/visa.png') no-repeat;
+}
+
+.choose-payment ul li a.method-mastercard{
+    background: url('../../images/payment-method/mastercard.png') no-repeat;
+}
+
+.choose-payment ul li a.method-klikbca{
+    background: url('../../images/payment-method/klikbca.png') no-repeat;
+}
+
+.choose-payment ul li a.method-bcaklikpay{
+    background: url('../../images/payment-method/bcaklikpay.png') no-repeat;
+}
+
+.choose-payment ul li a.method-tcash{
+    background: url('../../images/payment-method/tcash.png') no-repeat;
+}
+
+.choose-payment ul li a.method-cimbclicks{
+    background: url('../../images/payment-method/cimbclicks.png') no-repeat;
+}
+
+.choose-payment ul li a.method-rekeningponsel{
+    background: url('../../images/payment-method/rekeningponsel.png') no-repeat;
+}
+
+.choose-payment ul li a.method-banktransfer{
+    background: url('../../images/payment-method/banktransfer.png') no-repeat;
+}
+
+.choose-payment ul li a.method-paypal{
+    background: url('../../images/payment-method/paypal.png') no-repeat;
+}
+
+.choose-payment ul li a.method-epaybri{
+    background: url('../../images/payment-method/epaybri.png') no-repeat;
+}
+
+/*new ul li class*/
+.choose-payment ul li.method-visa{
+    background: url('../../images/payment-method/visa.png') no-repeat;
+}
+
+.choose-payment ul li.method-mastercard{
+    background: url('../../images/payment-method/mastercard.png') no-repeat;
+}
+
+.choose-payment ul li.method-klikbca{
+    background: url('../../images/payment-method/klikbca.png') no-repeat;
+}
+
+.choose-payment ul li.method-bcaklikpay{
+    background: url('../../images/payment-method/bcaklikpay.png') no-repeat;
+}
+
+.choose-payment ul li.method-tcash{
+    background: url('../../images/payment-method/tcash.png') no-repeat;
+}
+
+.choose-payment ul li.method-cimbclicks{
+    background: url('../../images/payment-method/cimbclicks.png') no-repeat;
+}
+
+.choose-payment ul li.method-rekeningponsel{
+    background: url('../../images/payment-method/rekeningponsel.png') no-repeat;
+}
+
+.choose-payment ul li.method-banktransfer{
+    background: url('../../images/payment-method/banktransfer.png') no-repeat;
+}
+
+.choose-payment ul li.method-paypal{
+    background: url('../../images/payment-method/paypal.png') no-repeat;
+}
+
+.choose-payment ul li.method-epaybri{
+    background: url('../../images/payment-method/epaybri.png') no-repeat;
+}
+/* End */
+.choose-payment ul li .payment-nav{
+    width: 10px;
+    height: 10px;
+    margin: 5px auto 0 auto;
+    background: #FFF;
+    border: 1px solid #c1c1c1;
+    box-shadow: inset 0 -4px 4px #f4f4f4, inset 0 0 0 #fde99c, 0 2px 3px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+}
+
+.choose-payment ul li.active .payment-nav{
+    background: #;
+    border: 1px solid #c25f0f;
+    box-shadow: inset 0 4px 4px #ffdb82, inset 0 1px 1px #fde99c, 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.choose-payment .box-check{
+    width: 92%;
+    margin-bottom: 10px;
+}
+
+.choose-payment span{
+    color: #FFF;
+    position: absolute;
+}
+
+.choose-payment .box-check span{
+    color: #2d729c;
+    position: relative;
+}
+
+.choose-payment ul{}
+
+.choose-payment ul li{
+    margin: 5px 7px;
+}
+
+.payment-detail .card-number .visa-num{
+    background: url('asset/images/payment-method/thumbnail-visa.png') left center no-repeat;
+}
+
+.payment-detail .card-number .thumb{
+    height: 30px;
+    width: 100px;
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.payment-detail .security-code .card-sample{
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin: 0 10px 0 0;
+    background: url('../img/payment-method/card-sample.png') no-repeat;
+}

@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <!-- Contact details -->
+    <section class="contact-details">
+      <div class="col-md-4">
+        <h2 class="lined-heading mt50"><span>Reservation Summary</span></h2>
+        <!-- Panel -->
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <div class="panel-title"><i class="fa fa-star"></i> <strong>Starhotel</strong></div>
+          </div>
+          <div class="panel-body">
+          	<div class="price">
+  			    <h4>{{$reservation->roomtype_name}}</h4>
+  			    @currency($reservation->roomprice_rate, 'EUR'),-<span> a night</span>
+    			  	<h4> {{$reservation->checkin}} - {{$reservation->checkout}}</h4>  
+    		  		<h4>{{$reservation->night}} Night | {{$reservation->adultQty}} @if($reservation->adultQty > 1)Adults @else Adult @endif
+    			  
+    			      @if($reservation->childQty > 1)
+    			        | {{$reservation->childQty}} Children 
+    			      @elseif($reservation->childQty != 0)
+    			        | {{$reservation->childQty}} Child
+    			      @endif
+    			      </h4>
+    		  	</div>
+          </div>
+        </div>        
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    
+    <section id="contact-form" class="mt50">
+      <div class="col-md-8">
+        <h2 class="lined-heading"><span>Guest Detail</span></h2>        
+        <!-- Error message -->
+        <div id="message"></div>
+        {{ Form::open(array('route' => 'post-step1', 'method' => 'POST')) }}
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name" accesskey="U"><span class="required">*</span> Full Name</label>
+              <input name="name" type="text" id="name" class="form-control" value="" placeholder="Full Name"/>
+            </div>
+            @if ($errors->has('name')) 
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              {{ $errors->first('name') }} </div>
+            @endif
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email" accesskey="E"><span class="required">*</span> E-mail</label>
+              <input name="email" type="text" id="email" value="" class="form-control" placeholder="E-mail"/>
+            </div>
+            @if ($errors->has('email')) 
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              {{ $errors->first('email') }} </div>
+            @endif
+          </div>
+        </div>
+        <!-- Nationality & Phone. No -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phone"><span class="required">*</span> Phone Number</label>
+              <input name="phone" type="text" id="phone" class="form-control" placeholder="Phone Number" value=""/>
+            </div>
+            @if ($errors->has('phone')) 
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              {{ $errors->first('phone') }} </div>
+            @endif
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nationality"><span class="required">*</span> Nationality</label>
+              {{Form::select('nationality', array('default'=>'Select your nationality')+$countries,null, array('class'=>'form-control')) }}             
+            </div>
+            @if ($errors->has('nationality')) 
+            <div class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              {{ $errors->first('nationality') }} </div>
+            @endif
+          </div>
+        </div>
+        <button type="submit" id="next" class="btn  btn-lg btn-primary">Next Step</button>     
+        <input type="hidden" name="roomtype_id" value="{{$reservation->roomtype_id}}">
+        <input type="hidden" name="roomtype_name" value="{{$reservation->roomtype_name}}">
+        <input type="hidden" name="roomprice_rate" value="{{$reservation->roomprice_rate}}">
+        <input type="hidden" name="checkin" value="{{$reservation->checkin}}">
+        <input type="hidden" name="checkout" value="{{$reservation->checkout}}">
+        <input type="hidden" name="adultQty" value="{{$reservation->adultQty}}">
+        <input type="hidden" name="childQty" value="{{$reservation->childQty}}">
+        <input type="hidden" name="night" value="{{$reservation->night}}">   
+        <input type="hidden" name="mode" value="continue">   
+        {{Form::close()}}
+      </div>        
+    </section>
+  </div>
+</div>
