@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnRoomtypename extends Migration {
+class CreateSurchargeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,11 @@ class AddColumnRoomtypename extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('booking_histories', function($table)
-        {
-            $table->string('roomtype_name')->after('roomtype_id')->nullable();
-        });
+		Schema::create('surcharge', function($table)
+		{
+			$table->increments('surcharge_id');
+	        $table->string('surcharge_description')->nullable();
+	    });
 	}
 
 	/**
@@ -25,7 +26,7 @@ class AddColumnRoomtypename extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('surcharge');
 	}
 
 }

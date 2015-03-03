@@ -16,6 +16,8 @@ class CreateBookingHistoryTable extends Migration {
         {
                 $table->string('id');
                 $table->string('guest_name');
+                $table->string('email');
+                $table->string('roomtype_name');
                 $table->string('roomtype_id');
                 $table->string('duration');
                 $table->string('room_qty');

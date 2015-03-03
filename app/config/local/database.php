@@ -34,7 +34,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'bengine',
+			'database' => 'bedemo',
 			'username' => 'postgres',
 			'password' => 'admin',
 			'charset'  => 'utf8',
