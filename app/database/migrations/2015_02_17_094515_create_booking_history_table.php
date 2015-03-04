@@ -15,20 +15,20 @@ class CreateBookingHistoryTable extends Migration {
 		Schema::create('booking_histories', function($table)
         {
                 $table->string('id');
-                $table->string('guest_name');
-                $table->string('email');
-                $table->string('roomtype_name');
-                $table->string('roomtype_id');
-                $table->string('duration');
-                $table->string('room_qty');
-                $table->integer('adult_qty');
-			    $table->integer('child_qty');
-			    $table->integer('infant_qty');
-                $table->string('check_in');
-                $table->string('check_out');
-                $table->string('payment_type');
-                $table->string('total');
-                $table->string('status');
+                $table->string('guest_name')->nullable();
+                $table->string('email')->nullable();
+                $table->string('roomtype_name')->nullable();
+                $table->string('roomtype_id')->nullable();
+                $table->string('duration')->nullable();
+                $table->string('room_qty')->nullable();
+                $table->integer('adult_qty')->nullable();
+			    $table->integer('child_qty')->nullable();
+			    $table->integer('infant_qty')->nullable();
+                $table->string('check_in')->nullable();
+                $table->string('check_out')->nullable();
+                $table->string('payment_type')->nullable();
+                $table->string('total')->nullable();
+                $table->string('status')->nullable();
 
                 $table->primary(array('id'));
         });

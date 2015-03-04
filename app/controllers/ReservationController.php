@@ -274,21 +274,21 @@ class ReservationController extends \BaseController {
             $roomAvailability = Reservation::getRoomAvailability(Input::get('roomavailability_id'), Input::get('checkin'), Input::get('checkout'));
             $resultArray = json_decode(json_encode($roomAvailability), true);
             
-            $booking_history = new BookingHistories();
-            $booking_history->id = $booking->booking_id;
-            $booking_history->guest_name = Input::get('name');
-            $booking_history->roomtype_id = Input::get('roomtype_id');
-            $booking_history->roomtype_name = Input::get('roomtype_name');
-            $booking_history->duration = $booking->booking_night;
-            $booking_history->room_qty = $booking->booking_totalroom;
-            $booking_history->check_in = $booking->booking_arrival_plan;
-            $booking_history->check_out = Input::get('checkout');
-            $booking_history->payment_type = $paymentType;
-            $booking_history->total = Input::get('roomprice_rate');
-            $booking_history->status = $status;
-            $booking_history->email = Input::get('email');
+            // $booking_history = new BookingHistories();
+            // $booking_history->id = $booking->booking_id;
+            // $booking_history->guest_name = Input::get('name');
+            // $booking_history->roomtype_id = Input::get('roomtype_id');
+            // $booking_history->roomtype_name = Input::get('roomtype_name');
+            // $booking_history->duration = $booking->booking_night;
+            // $booking_history->room_qty = $booking->booking_totalroom;
+            // $booking_history->check_in = $booking->booking_arrival_plan;
+            // $booking_history->check_out = Input::get('checkout');
+            // $booking_history->payment_type = $paymentType;
+            // $booking_history->total = Input::get('roomprice_rate');
+            // $booking_history->status = $status;
+            // $booking_history->email = Input::get('email');
             
-            $booking_history->save();
+            // $booking_history->save();
 
             //save to booking_timer
             $booking_timer = new BookingTimer();
@@ -345,7 +345,7 @@ class ReservationController extends \BaseController {
             }
         } catch (Exception $exc) {
             var_dump('inside exception');
-            var_dump($exc);
+            var_dump($exc);exit();
             //return Response::json(array('bookingCreated' => false));
         }         
         return Response::json(array('bookingCreated' => true, 'redirectUrl' => URL::route('getSuccess', $booking->booking_id)));
