@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">         
-    {{ Form::open(array('route' => 'check-availability-home', 'id' => 'formreservation', 'method' => 'POST', 'class' => 'form-inline reservation-horizontal clearfix')) }}
+    {{ Form::open(array('route' => 'check-availability', 'id' => 'formreservation', 'method' => 'POST', 'class' => 'form-inline reservation-horizontal clearfix')) }}
       <!-- Error message -->
       <div id="message"></div>
         <div class="row">
