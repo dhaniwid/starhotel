@@ -39,7 +39,8 @@
           <div class="panel-body">
           	<div class="price">
   			    <h4>{{$reservation->roomtype_name}}</h4>
-  			    @currency($reservation->roomprice_rate, 'IDR'),-<span> a night</span>
+  			    <!--@currency($reservation->roomprice_rate, 'IDR'),-<span> a night</span>-->
+            {{$reservation->roomprice_rate}},-<span> a night</span>
     			  	<h4> {{$reservation->checkin}} - {{$reservation->checkout}}</h4>  
     		  		<h4>{{$reservation->night}} Night | {{$reservation->adultQty}} @if($reservation->adultQty > 1)Adults @else Adult @endif
     			  

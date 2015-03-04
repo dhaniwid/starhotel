@@ -43,7 +43,6 @@ return array(
     'CreateBeddingTable' => $baseDir . '/app/database/migrations/2015_03_03_144029_create_bedding_table.php',
     'CreateBookingHistoryTable' => $baseDir . '/app/database/migrations/2015_02_17_094515_create_booking_history_table.php',
     'CreateBookingTable' => $baseDir . '/app/database/migrations/2015_03_03_125447_create_booking_table.php',
-    'CreateBookingsTableBaru' => $baseDir . '/app/database/migrations/2015_03_04_165448_create_bookings_table_baru.php',
     'CreateContentsTable' => $baseDir . '/app/database/migrations/2015_03_03_124204_create_contents_table.php',
     'CreateCountriesTable' => $baseDir . '/app/database/migrations/2015_03_03_130041_create_countries_table.php',
     'CreateCurrenciesTable' => $baseDir . '/app/database/migrations/2015_03_03_130439_create_currencies_table.php',

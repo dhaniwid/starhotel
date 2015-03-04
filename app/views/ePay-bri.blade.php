@@ -3,7 +3,7 @@
 		<div class="sectioning section-epaybri" style="display: none;">
 		    <div class="price">
 		    	<h2 class="lined-heading"><span>Payment Detail</span></h2>
-		        <p style="text-align: center; font-weight: bold;">Total biaya yang harus dibayar setelah dikonversi adalah @currency($reservation->roomprice_rate, 'IDR')</p>
+		        <p style="text-align: center; font-weight: bold;">Total biaya yang harus dibayar setelah dikonversi adalah {{$reservation->roomprice_rate}}</p>
 		       <div class="clear"></div>
 			    <div class="col-lg-12">
 		            <div class='col-lg-12 form-group' style="text-align: center">
