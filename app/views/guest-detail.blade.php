@@ -3,13 +3,13 @@
     <div class="col-lg-6">
     	<div class="form-group">
           <label for="name" accesskey="U"><span class="required">*</span> Full Name</label>
-          <input name="name" type="text" id="name" value="Ramadhani Widodo" class="form-control required" placeholder="Full Name"/>
+          <input name="name" type="text" id="name" class="form-control required" placeholder="Full Name"/>
         </div>
     </div>
     <div class="col-lg-6">
         <div class="form-group">
           <label for="email" accesskey="E"><span class="required">*</span> E-mail</label>
-          <input name="email" type="text" id="email" value="widodo.apple@gmail.com" class="form-control email required" placeholder="E-mail"/>
+          <input name="email" type="text" id="email" class="form-control email required" placeholder="E-mail"/>
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@
   <div class="col-md-6">
     <div class="form-group">
       <label for="phone"><span class="required">*</span> Phone Number</label>
-      <input name="phone" type="text" id="phone" value="085767654619" class="form-control number required" placeholder="Phone Number"/>
+      <input name="phone" type="text" id="phone" class="form-control number required" placeholder="Phone Number"/>
     </div>
   </div>
   <div class="col-md-6">
