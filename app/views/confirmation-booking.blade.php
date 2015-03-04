@@ -85,7 +85,6 @@
           </div>
           <div class="col-lg-1" style='padding-top: 8px'><span>:</span></div>
           <div class='col-lg-5' style='padding-top: 8px'>
-              <!--@currency($reservation->total,'IDR')-->
               {{$reservation->total}}
           </div>
         </div>
