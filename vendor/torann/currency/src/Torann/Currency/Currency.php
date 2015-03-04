@@ -65,7 +65,7 @@ class Currency {
 	{
 		if ($currency && $this->hasCurrency($currency))
 		{
-			var_dump($this->currencies);exit();
+			//var_dump($this->currencies);exit();
 			$symbol_left    = $this->currencies[$currency]['symbol_left'];
 			$symbol_right   = $this->currencies[$currency]['symbol_right'];
 			$decimal_place  = $this->currencies[$currency]['decimal_place'];
@@ -74,7 +74,7 @@ class Currency {
 		}
 		else
 		{
-			var_dump($this->currencies);exit();
+			//var_dump($this->currencies);exit();
 			$symbol_left    = $this->currencies[$this->code]['symbol_left'];
 			$symbol_right   = $this->currencies[$this->code]['symbol_right'];
 			$decimal_place  = $this->currencies[$this->code]['decimal_place'];
