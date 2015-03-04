@@ -15,7 +15,7 @@ class CreateRoomimagesTable extends Migration {
 		Schema::create('roomimages', function($table)
         {
             $table->string('roomimage_name');
-            $table->string('roomtype_id	');
+            $table->string('roomtype_id');
             $table->boolean('roomimage_mobile')->nullable();
             $table->boolean('roomimage_primary')->nullable();
             $table->string('roomimage_description')->nullable();
