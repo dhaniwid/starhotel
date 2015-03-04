@@ -21,7 +21,7 @@
 	</div>
 	<div class="price">
 	  <h2>Total</h2>
-	  @currency(($reservation->roomprice_rate*$reservation->night), 'IDR')
+	  Rp.{{$reservation->roomprice_rate*$reservation->night}}
 	</div>
 	  
 	<div id="message"></div>
