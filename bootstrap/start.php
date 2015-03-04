@@ -24,12 +24,9 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('BlueMamba'),
-
-));
-
+$env = $app->detectEnvironment(function(){
+	return gethostname();
+});
 /*
 |--------------------------------------------------------------------------
 | Bind Paths
