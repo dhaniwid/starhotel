@@ -75,7 +75,7 @@
           </div>
           <div class="col-lg-1" style='padding-top: 8px'><span>:</span></div>
           <div class='col-lg-5' style='padding-top: 8px'>
-                {{$reservation->payment_type}}
+                @currency($reservation->payment_type, 'IDR')
           </div>    
         </div>
 
@@ -85,7 +85,7 @@
           </div>
           <div class="col-lg-1" style='padding-top: 8px'><span>:</span></div>
           <div class='col-lg-5' style='padding-top: 8px'>
-              Rp.{{$reservation->total}}
+              @currency($reservation->total,'IDR')
           </div>
         </div>
 

@@ -68,7 +68,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'bengine',
 			'username' => 'postgres',
-			'password' => 'rahasia',
+			'password' => 'admin',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',

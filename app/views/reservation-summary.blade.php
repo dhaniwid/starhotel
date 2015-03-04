@@ -61,7 +61,7 @@
   <h2 class="lined-heading"><span>Reservation</span></h2>
   <div class="price">
     <h4>{{$reservation->roomtype_name}}</h4>
-    Rp.{{$reservation->roomprice_rate}},-<span> a night</span></div>
+    @currency($reservation->roomprice_rate, 'IDR'),-<span> a night</span></div>
   <div class="price">
   <h2>Summary</h2>
   <h4> {{$reservation->checkin}} - {{$reservation->checkout}}
@@ -77,7 +77,7 @@
   </div>
   <div class="price">
     <h2>Total</h2>
-    Rp.{{$reservation->roomprice_rate*$reservation->night}}
+    @currency($reservation->roomprice_rate*$reservation->night,'IDR')
   </div>
     <input type="hidden" name="roomtype_id" value="{{$reservation->roomtype_id}}">
     <input type="hidden" name="roomtype_name" value="{{$reservation->roomtype_name}}">
