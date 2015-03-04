@@ -6,9 +6,9 @@
 </section>
       
 <!-- Reservation form -->
-<section id="reservation-form">
+{{-- <section id="reservation-form">
   @include('home.search-reservation')
-</section>
+</section> --}}
 
 <!-- Rooms -->
 <section class="rooms mt50">
