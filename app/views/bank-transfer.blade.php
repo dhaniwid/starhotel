@@ -4,7 +4,7 @@
 			<div class="price">
 			    <h2 class="lined-heading"><span>Payment Detail</span></h2>
 			    <div class="col-lg-12">
-				    <p style="text-align: center; font-weight: bold;">Total amount to be paid @currency($reservation->roomprice_rate, 'IDR')</p>
+				    <p style="text-align: center; font-weight: bold;">Total amount to be paid Rp.{{$reservation->roomprice_rate}}</p>
 				    <div class="clear"></div>
 				</div>
 				<div class='col-lg-12 form-group' style="text-align: center">

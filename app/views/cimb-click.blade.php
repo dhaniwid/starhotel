@@ -2,7 +2,7 @@
 	<div class="sectioning section-cimbclicks" style="display: none;">
 	    <div class="price">
 	    	<h3>Payment Detail</h3>
-        	<p style="text-align: center; font-weight: bold;">Total amount to be paid @currency($reservation->roomprice_rate, 'IDR')</p>
+        	<p style="text-align: center; font-weight: bold;">Total amount to be paid Rp.{{$reservation->roomprice_rate}}</p>
 		    <div class="clear"></div>
 	        <div class="clear"></div>
 		    <div class="col-lg-12">

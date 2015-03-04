@@ -427,6 +427,27 @@ class BookingEngineTableSeeder extends Seeder {
 				)
 			);
 		DB::table('users_groups')->insert($usergroups);
+
+		$roomimages = array(
+			array('roomimage_name' => 'amarterra_spa_2.jpg',
+				'roomtype_id' => 'R61318',
+				'roomimage_description' => '/img/R61318/amarterra_spa_2.jpg'
+				),
+			array('roomimage_name' => 'bathroom_2.jpg',
+				'roomtype_id' => 'R61318',
+				'roomimage_description' => '/img/R61318/bathroom_2.jpg'
+				),
+			array('roomimage_name' => 'one_bedroom_villa_(private_pool).jpg',
+				'roomtype_id' => 'R61318',
+				'roomimage_description' => '/img/R61318/one_bedroom_villa_(private_pool).jpg'
+				),
+			array('roomimage_name' => 'one_bedroom_villa.jpg',
+				'roomtype_id' => 'R61318',
+				'roomimage_primary' => 'true',
+				'roomimage_description' => '/img/R61318/one_bedroom_villa.jpg'
+				),
+			);
+		DB::table('roomimages')->insert($roomimages);
 	}
 
 }

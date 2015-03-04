@@ -59,7 +59,7 @@
           <tr>
             <td style="font-weight: bold">Total Payment</td>
             <td>:</td>
-            <td>@currency(($reservation->total), 'IDR')</td>
+            <td>Rp.{{$reservation->total}}</td>
           </tr>
           <tr>
             <td style="font-weight: bold">Payment Status</td>

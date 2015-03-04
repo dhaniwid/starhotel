@@ -27,7 +27,7 @@
                         </div>
         	        </div>
         	    </div>
-                        <p style="text-align: center; font-weight: bold;">Total biaya yang harus dibayar setelah dikonversi adalah @currency($reservation->roomprice_rate, 'IDR')</p>
+                        <p style="text-align: center; font-weight: bold;">Total biaya yang harus dibayar setelah dikonversi adalah Rp.{{$reservation->roomprice_rate}}</p>
                 <div class="grid-30 tablet-grid-30 mobile-grid-100">
                     &nbsp;
                 </div>
