@@ -31,7 +31,7 @@
           <div class="mask">
             <div class="main">
               <h5>{{$resObj->roomtype_name}}</h5>
-              <div class="price">@currency($resObj->roomprice_rate, 'IDR')<span>a night</span></div>
+              <div class="price">@currency($resObj->roomprice_rate, 'USD')<span>a night</span></div>
             </div>
             <div class="content">
               <p><span></span>{{$resObj->roomtype_description}}</p>
