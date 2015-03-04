@@ -302,7 +302,7 @@ class BookingEngineTableSeeder extends Seeder {
                 'created_at' => '2013-11-29 19:51:38',
                 'updated_at' => '2013-11-29 19:51:38',
 			),
-                        array(
+            array(
 				'id' => 22,
 				'title' => 'Indonesian Rupiah',
 				'symbol_left' => 'Rp',
