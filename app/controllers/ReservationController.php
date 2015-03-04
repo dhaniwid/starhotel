@@ -251,51 +251,51 @@ class ReservationController extends \BaseController {
                 $status = 'PAID';
             }                
             
-            // $booking->booking_date = $date->format('Y-m-d');
-            // $booking->booking_time = $date->format('H:i:s');
-            // $booking->booking_arrival_plan = Input::get('checkin');
-            // $booking->booking_guestfirstname = Input::get('name');
-            // $booking->booking_night = Input::get('night');
-            // $booking->booking_adult = Input::get('adultQty');
-            // $booking->booking_child = Input::get('childQty');
-            // $booking->booking_totalroom = 1;
-            // $booking->booking_totalprice = Input::get('roomprice_rate');
-            // $booking->booking_fullprice = Input::get('roomprice_rate');
-            // $booking->booking_guestnationality = Input::get('nationality');
-            // $booking->booking_guestphone = Input::get('phone');
-            // $booking->booking_reserve = true;
-            // $booking->booking_guaranteed = false;
-            // $booking->booking_approved = false;
-            // $booking->booking_cancelled = false;
-            // $booking->booking_expired = false;
-            // $booking->save();
+            $booking->booking_date = $date->format('Y-m-d');
+            $booking->booking_time = $date->format('H:i:s');
+            $booking->booking_arrival_plan = Input::get('checkin');
+            $booking->booking_guestfirstname = Input::get('name');
+            $booking->booking_night = Input::get('night');
+            $booking->booking_adult = Input::get('adultQty');
+            $booking->booking_child = Input::get('childQty');
+            $booking->booking_totalroom = 1;
+            $booking->booking_totalprice = Input::get('roomprice_rate');
+            $booking->booking_fullprice = Input::get('roomprice_rate');
+            $booking->booking_guestnationality = Input::get('nationality');
+            $booking->booking_guestphone = Input::get('phone');
+            $booking->booking_reserve = true;
+            $booking->booking_guaranteed = false;
+            $booking->booking_approved = false;
+            $booking->booking_cancelled = false;
+            $booking->booking_expired = false;
+            $booking->save();
             
             //update roomavailability table
             $roomAvailability = Reservation::getRoomAvailability(Input::get('roomavailability_id'), Input::get('checkin'), Input::get('checkout'));
             $resultArray = json_decode(json_encode($roomAvailability), true);
             
-            // $booking_history = new BookingHistories();
-            // $booking_history->id = $booking->booking_id;
-            // $booking_history->guest_name = Input::get('name');
-            // $booking_history->roomtype_id = Input::get('roomtype_id');
-            // $booking_history->roomtype_name = Input::get('roomtype_name');
-            // $booking_history->duration = $booking->booking_night;
-            // $booking_history->room_qty = $booking->booking_totalroom;
-            // $booking_history->check_in = $booking->booking_arrival_plan;
-            // $booking_history->check_out = Input::get('checkout');
-            // $booking_history->payment_type = $paymentType;
-            // $booking_history->total = Input::get('roomprice_rate');
-            // $booking_history->status = $status;
-            // $booking_history->email = Input::get('email');
+            $booking_history = new BookingHistories();
+            $booking_history->id = $booking->booking_id;
+            $booking_history->guest_name = Input::get('name');
+            $booking_history->roomtype_id = Input::get('roomtype_id');
+            $booking_history->roomtype_name = Input::get('roomtype_name');
+            $booking_history->duration = $booking->booking_night;
+            $booking_history->room_qty = $booking->booking_totalroom;
+            $booking_history->check_in = $booking->booking_arrival_plan;
+            $booking_history->check_out = Input::get('checkout');
+            $booking_history->payment_type = $paymentType;
+            $booking_history->total = Input::get('roomprice_rate');
+            $booking_history->status = $status;
+            $booking_history->email = Input::get('email');
             
-            // $booking_history->save();
+            $booking_history->save();
 
             //save to booking_timer
-            // $booking_timer = new BookingTimer();
-            // $booking_timer->id = $booking->booking_id;
-            // $booking_timer->start_time = $date->createFromTime();;
-            // $booking_timer->end_time = $date->createFromTime()->addHours(1);
-            // $booking_timer->save();
+            $booking_timer = new BookingTimer();
+            $booking_timer->id = $booking->booking_id;
+            $booking_timer->start_time = $date->createFromTime();;
+            $booking_timer->end_time = $date->createFromTime()->addHours(1);
+            $booking_timer->save();
 
             //update for each room availability record
             // foreach($resultArray as $result){
