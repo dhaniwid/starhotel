@@ -4,7 +4,6 @@
 	<h2 class="lined-heading"><span>Reservation</span></h2>
 	<div class="price">
 	  <h4>{{$reservation->roomtype_name}}</h4>
-	  <!--@currency($reservation->roomprice_rate, 'IDR'),-<span> a night</span></div>-->
 	  Rp.{{$reservation->roomprice_rate}},-<span> a night</span></div>
 	<div class="price">
 	<h2>Summary</h2>
