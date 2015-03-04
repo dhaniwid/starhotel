@@ -331,18 +331,18 @@ class ReservationController extends \BaseController {
             $booking->total_price = Input::get('totalprice');
             
             //sending email : later this method will be encapsulated
-            // if($paymentType == 'Bank Transfer'){
-            //     Mail::send('voucher', array('reservation' => $booking_history), function($message)
-            //     {
-            //         $message->to(Input::get('email'), Input::get('name'))->subject('Thank You for Booking!');
-            //     });
+            if($paymentType == 'Bank Transfer'){
+                Mail::send('voucher', array('reservation' => $booking_history), function($message)
+                {
+                    $message->to(Input::get('email'), Input::get('name'))->subject('Thank You for Booking!');
+                });
                 
-            // }else{
-            //     Mail::send('voucher', array('reservation' => $booking_history), function($message)
-            //     {
-            //         $message->to(Input::get('email'), Input::get('name'))->subject('Thank You for Booking!');
-            //     });
-            // }
+            }else{
+                Mail::send('voucher', array('reservation' => $booking_history), function($message)
+                {
+                    $message->to(Input::get('email'), Input::get('name'))->subject('Thank You for Booking!');
+                });
+            }
         } catch (Exception $exc) {
             var_dump('inside exception');
             var_dump($exc);
