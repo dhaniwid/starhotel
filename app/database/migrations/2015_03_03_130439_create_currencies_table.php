@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrencyTable extends Migration {
+class CreateCurrenciesTable extends Migration {
 
 	protected $table_name;
 
