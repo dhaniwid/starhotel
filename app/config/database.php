@@ -66,7 +66,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'bedemo',
+			'database' => 'bengine',
 			'username' => 'postgres',
 			'password' => 'admin',
 			'charset'  => 'utf8',
