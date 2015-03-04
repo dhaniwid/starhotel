@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">         
-    {{ Form::open(array('route' => 'check-availability', 'id' => 'search-reservation-form', 'method' => 'POST', 'class' => 'form-inline reservation-horizontal clearfix')) }}
+    {{ Form::open(array('route' => 'check-availability-home', 'id' => 'formreservation', 'method' => 'POST', 'class' => 'form-inline reservation-horizontal clearfix')) }}
       <!-- Error message -->
       <div id="message"></div>
         <div class="row">
         <!-- Room Type combo box -->
-          <div class="col-sm-2">
+        <div class="col-sm-2">
+        </div>
+          {{-- <div class="col-sm-2">
             <div class="form-group">
               <label for="room">Room Type</label>
               <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> <i class="fa fa-info-circle fa-lg"> </i> </div>
@@ -17,7 +19,7 @@
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
               {{ $errors->first('room') }} </div>
             @endif
-          </div>
+          </div> --}}
           
           <!-- Check-in datepicker -->
           <div class="col-sm-2">
@@ -139,3 +141,40 @@
     </div>
   </div>
 </div>
+
+<script>
+$(function() 
+{
+  $(document).on('submit', '#formreservation', function()
+    {
+        var formData = new FormData($(this)[0]);
+        $.ajax({
+            type: "POST",
+            url: window.location.href.toString(),
+            data: formData,
+            dataType: "json",
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function(result)
+        {
+            if(result.checkProcess === false)
+            {
+                if(typeof result.message !== 'undefined')
+                {
+                    showStatusMessage(result.message, result.messageType);
+                }
+                else if(typeof result.errorMessages !== 'undefined')
+                {
+                    showRegisterFormAjaxErrors(result.errorMessages);
+                }
+            }
+            else
+            {
+               window.top.location.href = result.redirectUrl;
+            }
+        });
+        return false;
+    });
+});
+</script>

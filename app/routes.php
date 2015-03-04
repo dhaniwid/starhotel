@@ -65,6 +65,12 @@ Route::post('reservation', array(
 );
 
 /* Reservation */
+Route::get('reservation', array(
+    'as' => 'check-availability-home',
+    'uses' => 'ReservationController@postWidget')
+);
+
+/* Reservation */
 
 Route::post('reservation/checkout', array(
     'as' => 'checkout',
